@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utkarsh Ganesh | Strategic Operations & Governance Leader</title>
+  <style>
+    :root {
+      --primary: #0d4a6b;
+      --secondary: #1e3a5f;
+      --accent: #e53e3e;
+      --light: #f8fafc;
+      --dark: #1e293b;
+      --gray: #64748b;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    .video-placeholder {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px auto;
+      max-width: 600px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .photo-placeholder {
+      width: 100%;
+      height: 320px;
+      background: linear-gradient(45deg, #cbd5e1, #94a3b8);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo-placeholder::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50" y="50" font-family="Arial" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Professional Photo + Voice Recording Goes Here</text></svg>');
+      background-size: cover;
+      opacity: 0.7;
+    }
+    .section {
+      padding: 70px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+    .summary {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .skill-category {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .skill-category h3 {
+      color: var(--secondary);
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .skill-list {
+      list-style: none;
+    }
+    .skill-list li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .skill-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .experience-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      position: relative;
+      border-left: 4px solid var(--accent);
+    }
+    .experience-item h3 {
+      font-size: 1.6rem;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+    .experience-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--gray);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    .experience-bullets {
+      padding-left: 20px;
+    }
+    .experience-bullets li {
+      margin-bottom: 12px;
+    }
+    .global-map {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+    .country-tag {
+      background: var(--primary);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .value-prop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .value-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+    }
+    .value-card h4 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, var(--secondary), #0f264d);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.3rem;
+    }
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+      }
+      .section {
+        padding: 50px 0;
+      }
+      .summary, .global-map, .experience-item {
+        padding: 25px;
+      }
+      .value-prop {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero-content">
+      <h1>Utkarsh Ganesh</h1>
+      <div class="subtitle">Strategic Operations & Governance Leader | Multi-Sector Transformation | Global Execution</div>
+      
+      <div class="video-placeholder">
+        <div class="photo-placeholder">
+          [Your professional photo wearing a suit will appear here]<br>
+          <span style="font-size:0.9rem; margin-top:10px; display:block; opacity:0.9;">
+            Tap to hear my leadership philosophy
+          </span>
+        </div>
+      </div>
+      
+      <p style="max-width:600px; margin:25px auto 0; font-size:1.1rem;">
+        13+ years architecting governance frameworks, optimizing complex operations, and leading transformation across aviation, professional services, public sector, and technology environments
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">My Leadership Philosophy</h2>
+      <div class="summary">
+        I architect operational excellence where complexity meets execution. Across 13+ countries and multiple sectors—from aviation to professional services to public institutions—I've consistently delivered governance frameworks that align strategy with action, transformed fragmented processes into scalable systems, and enabled executive teams to make decisions with confidence. My strength lies in translating ambiguous challenges into structured execution plans while maintaining rigorous attention to stakeholder dynamics, risk mitigation, and sustainable outcomes. I thrive where others see chaos: in matrixed organizations, cross-cultural environments, and high-stakes transformation initiatives requiring equal parts analytical rigor and human-centered leadership.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color:#f1f5f9;">
+    <div class="container">
+      <h2 class="section-title">Cross-Industry Value Delivery</h2>
+      <div class="value-prop">
+        <div class="value-card">
+          <h4>🛡️ Governance Architecture</h4>
+          <p>Designed board-level governance frameworks adopted by multinational organizations to standardize decision rights, risk oversight, and strategic alignment across geographically dispersed operations</p>
+        </div>
+        <div class="value-card">
+          <h4>⚡ Operational Transformation</h4>
+          <p>Orchestrated end-to-end process redesigns delivering 12–15% efficiency gains by eliminating coordination gaps, automating handoffs, and embedding accountability into daily workflows</p>
+        </div>
+        <div class="value-card">
+          <h4>🌍 Global Execution</h4>
+          <p>Directed multi-stakeholder initiatives across 13+ countries—navigating regulatory diversity, cultural nuance, and time-zone complexity to deliver unified outcomes without centralizing control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>🏛️ Governance & Oversight</h3>
+          <ul class="skill-list">
+            <li>Governance framework design & implementation</li>
+            <li>Board/committee secretariat & strategic coordination</li>
+            <li>Policy architecture & compliance integration</li>
+            <li>Risk governance & escalation protocols</li>
+            <li>Strategic planning facilitation (C-suite to operations)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>⚙️ Operational Excellence</h3>
+          <ul class="skill-list">
+            <li>End-to-end process optimization & standardization</li>
+            <li>Complex workflow redesign (12–15% efficiency gains)</li>
+            <li>Multi-stakeholder coordination in matrixed environments</li>
+            <li>Performance metric design & operational dashboards</li>
+            <li>Change management for operational transformations</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>💡 Strategic Execution</h3>
+          <ul class="skill-list">
+            <li>Strategic initiative lifecycle management (PRINCE2)</li>
+            <li>Business case development & investment justification</li>
+            <li>Executive briefing synthesis (complex data → decisions)</li>
+            <li>Cross-functional team leadership & alignment</li>
+            <li>Budget stewardship & P&L accountability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color:#f8fafc;">
+    <div class="container">
+      <h2 class="section-title">Career Impact</h2>
+      
+      <div class="experience-item">
+        <h3>Strategic Operations & Governance Consultant</h3>
+        <div class="experience-meta">
+          <span>Independent Practice | Montreal, QC</span>
+          <span>2025 – Present</span>
+        </div>
+        <ul class="experience-bullets">
+          <li>Architected governance frameworks for institutional clients, establishing clear accountability structures that reduced decision latency by 30% while maintaining distributed autonomy</li>
+          <li>Designed process standardization initiatives eliminating coordination gaps across departments, resulting in 15% reduction in cross-functional handoff delays</li>
+          <li>Translated complex regulatory requirements and stakeholder inputs into actionable executive briefings that accelerated strategic planning cycles</li>
+          <li>Facilitated high-stakes committee sessions with C-suite and board members on sensitive strategic matters requiring rigorous confidentiality protocols</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <h3>Senior Leadership Roles</h3>
+        <div class="experience-meta">
+          <span>Multi-Sector (Aviation, Professional Services, Public Sector)</span>
+          <span>2012 – 2024</span>
+        </div>
+        <ul class="experience-bullets">
+          <li>Led operational transformation initiatives across North America, APAC, and EMEA—adapting frameworks to local contexts while maintaining global standards</li>
+          <li>Orchestrated technology adoption programs requiring change management across 500+ personnel in culturally diverse environments</li>
+          <li>Advised executive leadership on strategic trade-offs between operational resilience, cost efficiency, and stakeholder expectations</li>
+          <li>Built and mentored high-performing teams across 13+ countries, developing talent pipelines that increased internal promotion rates by 25%</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color:#f1f5f9;">
+    <div class="container">
+      <h2 class="section-title">Global Execution Footprint</h2>
+      <div class="global-map">
+        <p style="font-size:1.2rem; margin-bottom:20px;">
+          Proven ability to deliver complex initiatives across diverse regulatory, cultural, and operational environments
+        </p>
+        <div class="countries">
+          <span class="country-tag">🇨🇦 Canada</span>
+          <span class="country-tag">🇸🇬 Singapore</span>
+          <span class="country-tag">🇮🇳 India</span>
+          <span class="country-tag">🇦🇺 Australia</span>
+          <span class="country-tag">🇯🇵 Japan</span>
+          <span class="country-tag">🇰🇷 Korea</span>
+          <span class="country-tag">🇸🇧 Solomon Islands</span>
+          <span class="country-tag">🇲🇺 Mauritius</span>
+          <span class="country-tag">🇸🇦 Saudi Arabia</span>
+          <span class="country-tag">🇦🇪 UAE</span>
+          <span class="country-tag">🇺🇸 USA</span>
+          <span class="country-tag">🇲🇾 Malaysia</span>
+          <span class="country-tag">🇮🇩 Indonesia</span>
+          <span class="country-tag">🇹🇼 Chinese Taipei</span>
+        </div>
+        <p style="margin-top:25px; font-style:italic; color:var(--gray);">
+          Sector-agnostic execution: Aviation • Professional Services • Public Sector • Technology • Financial Services
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title" style="color:white; margin-bottom:30px;">Let's Solve Complex Challenges Together</h2>
+      <div class="contact-info">
+        <p>Montreal, QC | 📞 438-985-2068</p>
+        <p>✉️ <a href="mailto:utkarsh.ganesh@zohomailcloud.ca">utkarsh.ganesh@zohomailcloud.ca</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/ganeshutkarsh" target="_blank">linkedin.com/in/ganeshutkarsh</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Utkarsh Ganesh | Strategic Operations & Governance Leader | Montreal, Canada</p>
+      <p style="margin-top:8px; font-size:0.9rem;">This site deployed free via GitHub Pages • Authentic leadership, not AI avatars</p>
+    </div>
+  </footer>
+</body>
+</html>
